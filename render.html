@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>home</title>
+	<link rel="stylesheet" type="text/css" href="css/base.css">
+	<link rel="stylesheet" type="text/css" href="css/common.css">
+	<link rel="stylesheet" type="text/css" href="css/idangerous.swiper.css">
+	<link rel="stylesheet" type="text/css" href="css/renderings.css">
+	<link rel="stylesheet" type="text/css" href="dist/css/bootstrap.min.css"/>
+</head>
+<body>
+								<!-- Fixed navbar -->
+		<nav class="navbar navbar-default navbar-fixed-top">
+      		<div class="container">
+       	 		<div class="navbar-header">
+          			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            				<span class="sr-only">Toggle navigation</span>
+            				<span class="icon-bar"></span>
+            				<span class="icon-bar"></span>
+            				<span class="icon-bar"></span>
+          			</button>
+          			<a class="navbar-brand" href="#"><img src="img/home_logo.png" alt="" /></a>
+        			</div>
+        			<div id="navbar" class="navbar-collapse collapse">
+          			<ul class="nav navbar-nav navbar-right">
+           		 		<li><a href="index.html">Home</a></li>
+            				<li><a href="about.html">About</a></li>
+            				<li class="active"><a href="render.html">Renderings</a></li>
+             			<li><a href="bim.html">BIM</a></li>
+            				<li><a href="3d.html">3D Aimate</a></li>
+            				<li><a href="contact.html">Contact</a></li>
+          			</ul>
+        			</div>			
+     		</div>
+    		</nav>
+						<!--/.nav-collapse -->
+	<div id="main">
+		<h2 class="title">Digital Effect Drawing</h2>
+		<div class="swiper-container">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide">
+					<img src="img/swiper.jpg">
+				</div>
+				<div class="swiper-slide">
+					<img src="img/swiper.jpg">
+				</div>
+				<div class="swiper-slide">
+					<img src="img/swiper.jpg">
+				</div>
+			</div>
+			<div class="pagination"></div>
+		</div>
+		<ul id="waterFall" class="clearfix">
+			<li>
+				<!-- <div>
+					<img src="img/p1.jpg">
+					<p class="mask">
+						<span>这是标题</span>
+					</p>
+				</div>
+				<div>
+					<img src="img/p8.jpg">
+					<p class="mask">
+						<span>这是标题</span>
+					</p>
+				</div> -->
+			</li>
+			<li>
+				<!-- <div>
+					<img src="img/p6.jpg">
+					<p class="mask">
+						<span>这是标题</span>
+					</p>
+				</div> -->
+			</li>
+			<li>
+				<!-- <div>
+					<img src="img/p3.jpg">
+					<p class="mask">
+						<span>这是标题</span>
+					</p>
+				</div> -->
+			</li>
+		</ul>
+	</div>
+	<footer id="footer">
+		<section>
+			<h2 class="title">CONTACT US</h2>
+			<p>Email：eric@shining365.com</p>
+			<p>Mobile Phone：86 138 1690 3400</p>
+			<p>Tel：
+				<a href="tel:021-65986866-304">+86 21 6598 6866-304</a> 
+				<a href="tel:021-65983188-304">+86 21 6598 3188-304</a>
+			</p>
+		</section>
+		<div class="bottom">
+			Copyright&copy;1998-2015 shining Group
+		</div>
+	</footer>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/idangerous.swiper.min.js"></script>
+    <script type="text/javascript" src="dist/js/bootstrap.min.js"></script>
+
+	<script type="text/javascript">
+	//头部轮播图
+	var myswiper = new Swiper(".swiper-container",{
+		autoplay:5000,
+		speed:600,
+		loop:true,
+		pagination:".pagination",
+		calculateHeight: true, //自动计算高度，在响应式布局里特别有用
+		paginationClickable:true
+	});
+
+
+	//模拟后台的数据
+	var wtData = [{
+		"src":"img/p1.jpg",
+		"title":"标题111"
+	},{
+		"src":"img/p2.jpg",
+		"title":"标题222"
+	},{
+		"src":"img/p3.jpg",
+		"title":"标题333"
+	},{
+		"src":"img/p4.jpg",
+		"title":"标题444"
+	},{
+		"src":"img/p5.jpg",
+		"title":"标题555"
+	},{
+		"src":"img/p6.jpg",
+		"title":"标题666"
+	},{
+		"src":"img/p7.jpg",
+		"title":"标题777"
+	},{
+		"src":"img/p8.jpg",
+		"title":"标题888"
+	},{
+		"src":"img/p9.jpg",
+		"title":"标题999"
+	}];
+
+	//图片预加载
+	var beginNum = 0;
+	for(var k = 0,len = wtData.length; k < len; k++) {
+		var img = new Image();
+		img.src = wtData[k].src;
+		img.onload = function() {
+			beginNum++;
+			if(beginNum == len) {
+				// alert("图片都加载好了")
+				waterfall();
+			}
+		}
+		// var img = $("<img />");
+		// img.attr("src",wtData[k].src);
+		// img.load(function() {
+		// 	beginNum++;
+		// 	if(beginNum == len) {
+		// 		// alert("图片都加载好了")
+		// 		waterfall();
+		// 	}
+		// })
+	}
+
+	//瀑布流
+	function waterfall() {
+		start++;
+		for(var j = 0; j < wtData.length; j++) {
+			var newBlock = $("<div></div>");
+			var newBlockContent = '<img src="'+wtData[j].src+'">'+
+									'<p class="mask">'+
+										'<span>'+wtData[j].title+'</span>'+
+									'</p>';
+			newBlock.html(newBlockContent);
+			//找最小高度的li 
+			var minList = $("#waterFall li").eq(0);
+			for(var i = 0,len = $("#waterFall li").length;i < len; i++ ) {
+				if(minList.height() > $("#waterFall li").eq(i).height() ) {
+					minList = $("#waterFall li").eq(i);
+				}
+			}
+			minList.append(newBlock);
+		}
+	}
+
+
+	var total = 3;
+	var start = 0;
+	$(window).on("scroll",function() {
+		if($("#footer").offset().top < $(document).scrollTop() + $(window).height()) {
+			// alert("内容区到底了")
+			// console.log("内容区到底了")
+			if(start == total) return;
+			waterfall();
+		}
+	})
+	</script>
+</body>
+</html>

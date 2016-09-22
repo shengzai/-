@@ -1,0 +1,198 @@
+.navbar {
+  border-bottom: 2px solid #d6d6d6;
+}
+#navbar .active a {
+  background-color: #CEDB26;
+}
+.navbar-brand img {
+  width: 58%;
+}
+
+
+/*#main{
+	width: 100%;
+	overflow: hidden;
+}*/
+
+/*#main a {
+	width: 100%;
+	overflow: hidden;
+	position: relative;
+	background-color: yellow;
+	height: 100px;
+}
+#main video {
+	width: 100%;
+}
+#main section {
+	width: 100%;
+	height: 40px;
+	padding-left: 2%;
+	box-sizing: border-box;
+	background-color: rgba(0,0,0,.7);
+	position: absolute;
+
+	top: -110px
+	color: rgba(255,255,255,.5);
+
+}
+#main ul {
+	width: 80%;
+	margin: 0 auto;
+}
+#main ul li {
+	width: 100%;
+}
+#main ul li img {
+	width: 70%;
+
+	display: inline-block;
+	vertical-align: middle;
+}
+#main ul li p {
+	width: 28%;
+
+	display: inline-block;
+	vertical-align: middle;
+}
+#main a p span:first-child {
+	font-size: 3rem;
+}
+#main a p span:last-child {
+	width: 60%;
+	font-size: 1.5rem;
+}
+.li2 a p,.li4 a p {
+	float: left;
+	padding-top: 5%;
+	box-sizing: border-box;
+	text-align: right;
+}
+.li2 a img,.li4 a img {
+	float: right;
+}*/
+.footer {
+  width: 100%;
+  text-align: center;
+  overflow: hidden;
+}
+.footer_1 {
+  width: 100%;
+  margin: 0 auto;
+  background-color: #fff;
+  text-align: center;
+}
+.footer_2 {
+  width: 100%;
+  border-top: 2px solid #cddc00;
+  margin-top: 8%;
+  background-color: #b5b5b5;
+  padding: 10px;
+  color: #fff;
+}
+.span {
+  color: #aeaeae;
+  font-size: 0.06rem;
+} 
+
+
+
+#mainContent {
+  position: relative;
+}
+#mainContent .remment-box {
+  position: relative;
+}
+#mainContent .remment-box video {
+  display: block;
+}
+#mainContent .remment-box:hover div {
+  left: 0;
+}
+#mainContent .remment-box div {
+  transition: left 1s;
+  position: absolute;
+  left: -100%;
+  bottom: 4.2%;
+  width: 92%;
+  padding: 0 4% 2%;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+}
+#mainContent .remment-box div h3 {
+  height: 72px;
+  line-height: 72px;
+  font-size: 3em;
+}
+#mainContent .remment-box div p {
+  font-size: 1.6em;
+}
+#mainContent #goTop {
+  position: absolute;
+  width: 0;
+  height: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -35px;
+  border-width: 40px 35px ;
+  border-style: solid;
+  border-color: transparent transparent #cfdb00 transparent;
+}
+#mainContent #goTop:after {
+  content: "TOP";
+  color: #fff;
+  font-size: 1.6em;
+  position: absolute;
+  left: -35px;
+  width: 70px;
+  bottom: -40px;
+  text-align: center;
+}
+#mainContent .video-container {
+  background-color: #f5f5f5;
+  padding-top: 4%;
+  padding-bottom: 15%;
+}
+#mainContent .video-container .video-list {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+#mainContent .video-container .video-list video {
+  display: block;
+}
+#mainContent .video-container .video-list li {
+  border-bottom: 1px solid #d9d9d9;
+  margin-top: 6.25%;
+  padding-bottom: 10px;
+}
+#mainContent .video-container .video-list li > div {
+  display: inline-block;
+  vertical-align: middle;
+}
+#mainContent .video-container .video-list li > div.list-one {
+  width: 48%;
+  background-color: #fff;
+  padding: 8px;
+  border-radius: 4px;
+}
+#mainContent .video-container .video-list li > div.list-two {
+  width: 38%;
+  margin-left: 4%;
+  margin-right: 4%;
+}
+#mainContent .video-container .video-list li > div.list-two h3 {
+  color: #333;
+  font-size: 3em;
+}
+#mainContent .video-container .video-list li > div.list-two p {
+  color: #666;
+  font-size: 1.6em;
+}
+@media screen and (max-width: 480px) {
+  #mainContent .video-container .video-list li > div.list-one,
+  #mainContent .video-container .video-list li > div.list-two {
+    display: block;
+    width: 92%;
+    margin: 0 auto;
+  }
+}

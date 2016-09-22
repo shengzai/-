@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+		
+		<title>Render</title>
+		<link rel="stylesheet" type="text/css" href="dist/css/bootstrap.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/render.css"/>
+	</head>
+	<body>
+							<!-- Fixed navbar -->
+		<nav class="navbar navbar-default navbar-fixed-top">
+      		<div class="container">
+       	 		<div class="navbar-header">
+          			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            				<span class="sr-only">Toggle navigation</span>
+            				<span class="icon-bar"></span>
+            				<span class="icon-bar"></span>
+            				<span class="icon-bar"></span>
+          			</button>
+          			<a class="navbar-brand" href="#"><img src="img/home_logo.png" alt="" /></a>
+        			</div>
+        			<div id="navbar" class="navbar-collapse collapse">
+          			<ul class="nav navbar-nav navbar-right">
+           		 		<li><a href="index.html">Home</a></li>
+            				<li><a href="about.html">About</a></li>
+            				<li class="active"><a href="#">Renderings</a></li>
+             			<li><a href="bim.html">BIM</a></li>
+            				<li><a href="3d.html">3D Aimate</a></li>
+            				<li><a href="contact.html">Contact</a></li>
+          			</ul>
+        			</div>			
+     		</div>
+    		</nav>
+		<!--/.nav-collapse -->
+		
+		
+		
+		<div  class="content">
+			<div id="wrap">
+				<div id="inner">
+					<a href="###"><img src="img/k_03.png" alt=""></a>
+					<a href="###"><img src="img/k_03.png" alt=""></a>
+					<a href="###"><img src="img/k_03.png" alt=""></a>
+			</div>
+			<div class="paganation" id="paganation">
+					<span class ="bbb"></span>
+					<span></span>
+					<span></span>
+			</div>
+		</div>
+				<div class="bu">
+					<img src="img/e_09.png" class="img1"/>
+					<img src="img/e_11.png" class="img2"/>
+					<img src="img/e_13.png" class="img3"/>
+					
+					
+					<img src="img/v_09.png" class="img4"/>
+					<img src="img/v_11.png" class="img5"/>
+					<img src="img/v_13.png" class="img6"/>
+					
+					
+					<img src="img/n_09.png" class="img7"/>
+					<img src="img/n_11.png" class="img8"/>
+					<img src="img/n_13.png" class="img9"/>
+					
+					
+					<img src="img/n_23.png" class="img10"/>
+					<img src="img/n_25.png" class="img11"/>
+					<img src="img/n_27.png" class="img12"/>	
+				</div>
+				
+				<div class="active_2">
+					<br />
+					<img src="img/o_03.png" alt="返回顶部" id="topBar"/>
+				</div>
+			<!--</div>
+		</div>
+		-->
+		
+	<div  class="footer">
+			<div class="footer_1">
+				<br /><br />
+				<span style="color: #CEDB26;">━━━━━</span>
+				<span>CONTACT US</span>
+				<span style="color: #CEDB26;">━━━━━</span>
+				<br /><br /><br />
+				<span class="span">Email：eric@shining365.com</span>
+				<br />
+				<span class="span">Mobile Phone：86 138 1690 3400</span>
+				<br />
+				<span class="span">Tel：+86 21 6598 6866-304  +86 21 6598 3188-304</span>
+			</div>
+			
+			<div class="footer_2">
+				<span>Copyright © 1998-2015 shining Group</span>
+			</div>
+		</div>
+		
+		<script type="text/javascript" src="dist/js/jquery.min.js"></script>
+    		<script type="text/javascript" src="dist/js/bootstrap.min.js"></script>
+    		
+    		
+    		<script type="text/javascript">
+		$(function() {
+	var index = 0;
+	$("#paganation span").on("click",function(){
+		index = $(this).index();
+		fade();
+	})
+	function fade() {
+		$("#inner a").eq(index).fadeIn(600).siblings().fadeOut(600);
+		$("#paganation span").eq(index).addClass("bbb").siblings().removeClass("bbb");
+	}
+
+})
+		
+		
+		
+		$(".active_2").click(function() {
+			// $("html,body").scrollTop(0);
+			$("html,body").animate({
+				scrollTop:0
+			},400,"swing",function(){
+//				alert("到顶了")//弹出两次，选择了两个元素
+			})
+		})
+	</script>
+	</body>
+</html>
